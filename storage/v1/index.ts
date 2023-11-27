@@ -17,4 +17,4 @@ const _module = {
         }
     },
 };
-pulumi.runtime.registerResourceModule("kubernetes", "core/v1", _module)
+pulumi.runtime.registerResourceModule("kubernetes", "storage.k8s.io/v1", _module)

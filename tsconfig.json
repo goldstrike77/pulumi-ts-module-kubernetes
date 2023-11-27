@@ -13,6 +13,7 @@
         "strict": true
     },
     "files": [
+        "apiextensions/customresource.ts",
         "core/index.ts",
         "core/v1/namespace.ts",
         "core/v1/secret.ts",
