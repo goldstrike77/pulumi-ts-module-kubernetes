@@ -13,10 +13,13 @@
         "strict": true
     },
     "files": [
+        "core/index.ts",
+        "core/v1/namespace.ts",
+        "core/v1/secret.ts",
         "helm/index.ts",
         "helm/v3/index.ts",
         "helm/v3/release.ts",
-        "core/index.ts",
-        "core/v1/namespace.ts",
+        "storage/v1/storageclass.ts",
+        "yaml/configfile.ts",
     ]
 }
