@@ -1,1 +1,1 @@
-# pulumi-ts-module-kubernetes
+编程主要靠蒙。
