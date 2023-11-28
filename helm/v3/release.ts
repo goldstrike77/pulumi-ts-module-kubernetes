@@ -38,7 +38,7 @@ export class Release extends pulumi.ComponentResource {
                         recreatePods: args.resources[i].release[j].recreatePods || true,
                         renderSubchartNotes: args.resources[i].release[j].renderSubchartNotes || false,
                         replace: args.resources[i].release[j].replace || false,
-                        repositoryOpts: args.resources[i].release[j].repositoryOpts || {},
+                        repositoryOpts: args.resources[i].release[j].repositoryOpts || null,
                         resetValues: args.resources[i].release[j].resetValues || false,
                         resourceNames: args.resources[i].release[j].resourceNames || {},
                         reuseValues: args.resources[i].release[j].reuseValues || false,
