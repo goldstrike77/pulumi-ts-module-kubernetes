@@ -17,9 +17,9 @@ export class ConfigFile extends pulumi.ComponentResource {
             for (var j in args.resources[i].configfile) {
                 this.resources = new k8s.yaml.ConfigFile(args.resources[i].configfile[j].file,
                     {
-                        file: args.resources[i].configfile[i].file,
-                        resourcePrefix: args.resources[i].configfile.resourcePrefix || null,
-                        transformations: args.resources[i].configfile.transformations || [],
+                        file: args.resources[i].configfile[j].file,
+                        resourcePrefix: args.resources[i].configfile[j].resourcePrefix || null,
+                        transformations: args.resources[i].configfile[j].transformations || [],
                     },
                     {
                         parent: this,
