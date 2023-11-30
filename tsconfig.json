@@ -14,6 +14,7 @@
     },
     "files": [
         "apiextensions/customresource.ts",
+        "apps/v1/deployment.ts",
         "core/index.ts",
         "core/v1/namespace.ts",
         "core/v1/secret.ts",
