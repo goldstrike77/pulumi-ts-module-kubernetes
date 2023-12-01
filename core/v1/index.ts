@@ -1,6 +1,11 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../../utilities";
 
+export { ConfigMapArgs } from "./configmap";
+export type ConfigMap = import("./configmap").ConfigMap;
+export const ConfigMap: typeof import("./configmap").ConfigMap = null as any;
+utilities.lazyLoad(exports, ["ConfigMap"], () => require("./configmap"));
+
 export { NamespaceArgs } from "./namespace";
 export type Namespace = import("./namespace").Namespace;
 export const Namespace: typeof import("./namespace").Namespace = null as any;
@@ -20,6 +25,8 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
+            case "kubernetes:core/v1:ConfigMap":
+                return new ConfigMap(name, <any>undefined, { urn })
             case "kubernetes:core/v1:Namespace":
                 return new Namespace(name, <any>undefined, { urn })
             case "kubernetes:core/v1:Secret":
